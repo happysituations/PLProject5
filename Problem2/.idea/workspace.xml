@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dfb42d4c-afd6-48d3-bdd6-da1cbe24bb0f" name="Default" comment="" />
-    <ignored path="Problem1.iws" />
+    <list default="true" id="cd4c04c5-58b1-4bf0-b0ab-a92b3b5de95b" name="Default" comment="" />
+    <ignored path="Problem2.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,7 +18,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="Problem1" />
+    <favorites_list name="Problem2" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -61,19 +61,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Problem1" />
+              <option name="myItemId" value="Problem2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,16 +171,16 @@
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dfb42d4c-afd6-48d3-bdd6-da1cbe24bb0f" name="Default" comment="" />
-      <created>1459886263383</created>
+      <changelist id="cd4c04c5-58b1-4bf0-b0ab-a92b3b5de95b" name="Default" comment="" />
+      <created>1459886409368</created>
       <option name="number" value="Default" />
-      <updated>1459886263383</updated>
-      <workItem from="1459886267811" duration="146000" />
+      <updated>1459886409368</updated>
+      <workItem from="1459886412807" duration="2000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146000" />
+    <option name="totallyTimeSpent" value="2000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
