@@ -37,11 +37,17 @@ public class ListComprehension {
         emp.add(e15); emp.add(e16); emp.add(e17); emp.add(e18); emp.add(e19); emp.add(e20); emp.add(e21);
         emp.add(e22); emp.add(e23); emp.add(e24); emp.add(e25);
 
+        emp.stream()
+                .mapToInt(e -> (Integer)e.get(0))
+                .forEach(e -> {System.out.println(e);});
 
 
         emp.stream()
                 .filter(e -> (Integer)e.get(7) >= 1000 )
                 .forEach(e -> {System.out.println(e);});
 
+        emp.stream()
+                .filter(e -> e.get(6) == "Warehouse Manager")
+                .forEach(e -> {System.out.println(e);});
     }
 }
