@@ -57,12 +57,15 @@ public class ListComprehension {
 
         emp.stream()
                 .mapToInt(e -> (Integer)e.get(0))
+                .sorted()
                 .forEach(e -> {System.out.println(e);});
 
+        System.out.println();
         emp.stream()
                 .filter(e -> (Integer)e.get(7) >= 1000 )
                 .forEach(e -> {System.out.println(e);});
 
+        System.out.println();
         emp.stream()
                 .filter(e -> e.get(6) == "Warehouse Manager")
                 .forEach(e -> {System.out.println(e);});
