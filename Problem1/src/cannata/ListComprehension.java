@@ -56,20 +56,20 @@ public class ListComprehension {
         dept.add(d8); dept.add(d9); dept.add(d10); dept.add(d11); dept.add(d12);
 
         System.out.println();
-        System.out.println("select ID from emp order by ID");
+        System.out.println("select ID from emp order by ID;");
         emp.stream()
                 .mapToInt(e -> (Integer)e.get(0))
                 .sorted()
                 .forEach(e -> {System.out.println(e);});
 
         System.out.println();
-        System.out.println("select SALARY from emp where SALARY >= 1000");
+        System.out.println("select SALARY from emp where SALARY >= 1000;");
         emp.stream()
                 .filter(e -> (Integer)e.get(7) >= 1000 )
                 .forEach(e -> {System.out.println(e);});
 
         System.out.println();
-        System.out.println("select TITLE from emp where TITLE = 'WAREHOUSE MANAGER'");
+        System.out.println("select TITLE from emp where TITLE = 'WAREHOUSE MANAGER';");
         emp.stream()
                 .filter(e -> e.get(6) == "WAREHOUSE MANAGER")
                 .forEach(e -> {System.out.println(e);});
@@ -85,25 +85,32 @@ public class ListComprehension {
                 .forEach(d -> {System.out.println(d); });
 
         System.out.println();
-        System.out.println("select * from ( select * from EMP where SAL >1000 order by dbms_random.value ) where rownum = 1");
+        System.out.println("select * from ( select * from EMP where SAL >1000 order by dbms_random.value ) where rownum = 1;");
         emp.stream()
                 .filter(e -> (Integer)e.get(7) >= 1000 )
                 .findAny()
                 .ifPresent(System.out::println);
 
         System.out.println();
-        System.out.println("select TITLE from ( select * from EMP where TITLE = 'WAREHOUSE MANAGER' order by dbms_random.value ) where rownum =1");
+        System.out.println("select TITLE from ( select * from EMP where TITLE = 'WAREHOUSE MANAGER' order by dbms_random.value ) where rownum =1;");
         emp.stream()
                 .filter(e -> e.get(6) == "Warehouse Manager")
                 .findAny()
                 .ifPresent(System.out::println);
 
         System.out.println();
-        System.out.println("select * from EMP minus select * from EMP where rownum <= 3");
+        System.out.println("select * from EMP minus select * from EMP where rownum <= 3;");
         emp.stream()
                 .skip(3)
                 .forEach(e -> {System.out.println(e);});
 
+        System.out.println();
+        System.out.println("select * from (  select * from (select * from EMP minus select * from EMP where rownum <= 3) where SAL >1000 order by dbms_random.value ) where rownum = 1;");
+        emp.stream()
+                .skip(3)
+                .filter(e -> (Integer)e.get(7) >= 1000 )
+                .findAny()
+                .ifPresent(System.out::println);
 
     }
 }
