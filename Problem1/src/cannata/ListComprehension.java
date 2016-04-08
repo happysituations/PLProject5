@@ -66,9 +66,12 @@ public class ListComprehension {
                 .forEach(e -> {System.out.println(e);});
 
         System.out.println();
+
         emp.stream()
-                .filter(e -> e.get(6) == "Warehouse Manager")
+                .filter(e -> e.get(6) == "WAREHOUSE MANAGER")
                 .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
 
         System.out.println("select * from emp;");
         emp.stream()
@@ -78,7 +81,6 @@ public class ListComprehension {
         System.out.println("select * from dept;");
         dept.stream()
                 .forEach(d -> {System.out.println(d); });
-
 
     }
 }
