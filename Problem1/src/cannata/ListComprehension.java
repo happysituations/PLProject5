@@ -72,6 +72,27 @@ public class ListComprehension {
                 .forEach(e -> {System.out.println(e);});
 
         System.out.println();
+        System.out.println("select * from emp;");
+        emp.stream()
+                .forEach(e -> { System.out.println(e); });
+
+        System.out.println(); //for readability
+        System.out.println("select * from dept;");
+        dept.stream()
+                .forEach(d -> {System.out.println(d); });
+
+        System.out.println("Meow");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) >= 1000 )
+                .findAny()
+                .ifPresent(System.out::println);
+
+        System.out.println("WAREHOUSE");
+        emp.stream()
+                .filter(e -> e.get(6) == "Warehouse Manager")
+                .findAny()
+                .ifPresent(System.out::println);
+
 
         System.out.println("select * from emp;");
         emp.stream()
@@ -81,6 +102,12 @@ public class ListComprehension {
         System.out.println("select * from dept;");
         dept.stream()
                 .forEach(d -> {System.out.println(d); });
+
+        System.out.println();
+        emp.stream()
+                .skip(3)
+                .forEach(e -> {System.out.println(e);});
+
 
     }
 }
