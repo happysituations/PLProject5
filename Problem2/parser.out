@@ -2,36 +2,49 @@ Created by PLY version 3.8 (http://www.dabeaz.com/ply)
 
 Grammar
 
-Rule 0     S' -> start
-Rule 1     start -> Tap
-Rule 2     start -> Cling
-Rule 3     start -> Clink
-Rule 4     start -> Drip
-Rule 5     start -> Whack
+Rule 0     S' -> line1
+Rule 1     line1 -> Tap
+Rule 2     line1 -> Cling
+Rule 3     line1 -> Clink
+Rule 4     line1 -> Drip
+Rule 5     line1 -> Whack
+Rule 6     line2 -> Shoes
+Rule 7     line2 -> Keys
+Rule 8     line2 -> Cuffs
+Rule 9     line2 -> Water
+Rule 10    line2 -> A
+Rule 11    line2 -> One
 
 Terminals, with rules where they appear
 
+A                    : 10
 Cling                : 2
 Clink                : 3
+Cuffs                : 8
 Drip                 : 4
+Keys                 : 7
+One                  : 11
+Shoes                : 6
 Tap                  : 1
+Water                : 9
 Whack                : 5
 error                : 
 
 Nonterminals, with rules where they appear
 
-start                : 0
+line1                : 0
+line2                : 
 
 Parsing method: LALR
 
 state 0
 
-    (0) S' -> . start
-    (1) start -> . Tap
-    (2) start -> . Cling
-    (3) start -> . Clink
-    (4) start -> . Drip
-    (5) start -> . Whack
+    (0) S' -> . line1
+    (1) line1 -> . Tap
+    (2) line1 -> . Cling
+    (3) line1 -> . Clink
+    (4) line1 -> . Drip
+    (5) line1 -> . Whack
 
     Tap             shift and go to state 1
     Cling           shift and go to state 4
@@ -39,45 +52,45 @@ state 0
     Drip            shift and go to state 2
     Whack           shift and go to state 6
 
-    start                          shift and go to state 3
+    line1                          shift and go to state 3
 
 state 1
 
-    (1) start -> Tap .
+    (1) line1 -> Tap .
 
-    $end            reduce using rule 1 (start -> Tap .)
+    $end            reduce using rule 1 (line1 -> Tap .)
 
 
 state 2
 
-    (4) start -> Drip .
+    (4) line1 -> Drip .
 
-    $end            reduce using rule 4 (start -> Drip .)
+    $end            reduce using rule 4 (line1 -> Drip .)
 
 
 state 3
 
-    (0) S' -> start .
+    (0) S' -> line1 .
 
 
 
 state 4
 
-    (2) start -> Cling .
+    (2) line1 -> Cling .
 
-    $end            reduce using rule 2 (start -> Cling .)
+    $end            reduce using rule 2 (line1 -> Cling .)
 
 
 state 5
 
-    (3) start -> Clink .
+    (3) line1 -> Clink .
 
-    $end            reduce using rule 3 (start -> Clink .)
+    $end            reduce using rule 3 (line1 -> Clink .)
 
 
 state 6
 
-    (5) start -> Whack .
+    (5) line1 -> Whack .
 
-    $end            reduce using rule 5 (start -> Whack .)
+    $end            reduce using rule 5 (line1 -> Whack .)
 
