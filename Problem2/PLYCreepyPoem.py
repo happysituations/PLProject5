@@ -7,6 +7,7 @@ Data 1.0
 Data 2.0
 """
 
+# Tokens
 tokens = ('Tap','Cling','Clink','Drip', 'Whack')
 literals = ['.',  ]
 
@@ -18,19 +19,6 @@ t_Drip = r'^Drip.*$'
 t_Whack = r'^Whack.*$'
 
 
-# Tokens
-"""t_HEADER1  = r'^Header1[ -~]+$'
-t_HEADER2  = r'^Header2.*$'
-t_DATA     = r'Data'
-"""
-def t_INTEGER(t):
-    r'\d+'
-    try:
-        t.value = int(t.value)
-    except ValueError:
-        print("Integer value too large %d", t.value)
-        t.value = 0
-    return t
 
 # Ignored characters
 t_ignore = " \r"
@@ -63,11 +51,6 @@ def p_start(t):
 
 def p_empty(t):
     pass
-'''
-def p_float(t):
-    'float : INTEGER "." INTEGER'
-    t[0] =  str(t[1]) + str(t[2]) + str(t[3])
-'''
 
 def p_error(t):
     if t == None:

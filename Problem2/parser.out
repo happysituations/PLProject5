@@ -1,0 +1,83 @@
+Created by PLY version 3.8 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> start
+Rule 1     start -> Tap
+Rule 2     start -> Cling
+Rule 3     start -> Clink
+Rule 4     start -> Drip
+Rule 5     start -> Whack
+
+Terminals, with rules where they appear
+
+Cling                : 2
+Clink                : 3
+Drip                 : 4
+Tap                  : 1
+Whack                : 5
+error                : 
+
+Nonterminals, with rules where they appear
+
+start                : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . start
+    (1) start -> . Tap
+    (2) start -> . Cling
+    (3) start -> . Clink
+    (4) start -> . Drip
+    (5) start -> . Whack
+
+    Tap             shift and go to state 1
+    Cling           shift and go to state 4
+    Clink           shift and go to state 5
+    Drip            shift and go to state 2
+    Whack           shift and go to state 6
+
+    start                          shift and go to state 3
+
+state 1
+
+    (1) start -> Tap .
+
+    $end            reduce using rule 1 (start -> Tap .)
+
+
+state 2
+
+    (4) start -> Drip .
+
+    $end            reduce using rule 4 (start -> Drip .)
+
+
+state 3
+
+    (0) S' -> start .
+
+
+
+state 4
+
+    (2) start -> Cling .
+
+    $end            reduce using rule 2 (start -> Cling .)
+
+
+state 5
+
+    (3) start -> Clink .
+
+    $end            reduce using rule 3 (start -> Clink .)
+
+
+state 6
+
+    (5) start -> Whack .
+
+    $end            reduce using rule 5 (start -> Whack .)
+
