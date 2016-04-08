@@ -7,13 +7,17 @@ Data 1.0
 Data 2.0
 """
 
-tokens = ('LINUX','CPU',)
+tokens = ('Tap','Cling','Clink','Drip', 'Whack')
 literals = ['.',  ]
 
 
-t_LINUX = r'^Linux.*$'
-t_CPU = r'^.*CPU.*$'
-t_ALL = r'^.*all.*$'
+t_Tap = r'^Tap.*$'
+t_Cling = r'^Cling.*$'
+t_Clink = r'^Clink.*$'
+t_Drip = r'^Drip.*$'
+t_Whack = r'^Whack.*$'
+
+
 # Tokens
 """t_HEADER1  = r'^Header1[ -~]+$'
 t_HEADER2  = r'^Header2.*$'
@@ -49,10 +53,11 @@ global time_step
 time_step = 0
 
 def p_start(t):
-    '''start : LINUX
-             | CPU
-             | ALL
-             | empty
+    '''start : Tap
+             | Cling
+             | Clink
+             | Drip
+             | Whack
     '''
     print ("Saw ",t[1])
 
