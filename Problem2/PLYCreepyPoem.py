@@ -62,12 +62,15 @@ def p_line2(t):
              | Cuffs
              | Water
              | A
-             | One
     '''
     print("This is line 2 of the stanza: " + t[1])
 
-def p_empty(t):
-    pass
+def p_lastline(t):
+    '''line : One
+
+    '''
+    print("")
+    print("This is the last line of the poem: " + t[1])
 
 def p_error(t):
     if t == None:

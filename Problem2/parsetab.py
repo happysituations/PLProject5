@@ -5,9 +5,9 @@ _tabversion = '3.8'
 
 _lr_method = 'LALR'
 
-_lr_signature = '6DD851EBFBF22DF8C2EB31E8046F0D91'
+_lr_signature = '660E2E04627EEF0584BF7CD5EF642B0C'
     
-_lr_action_items = {'Tap':([0,],[1,]),'Drip':([0,],[2,]),'Cling':([0,],[4,]),'Clink':([0,],[5,]),'Whack':([0,],[6,]),'$end':([1,2,3,4,5,6,],[-1,-4,0,-2,-3,-5,]),}
+_lr_action_items = {'A':([0,],[1,]),'Tap':([0,],[2,]),'Shoes':([0,],[3,]),'Cuffs':([0,],[4,]),'Keys':([0,],[5,]),'Drip':([0,],[6,]),'One':([0,],[8,]),'Water':([0,],[9,]),'Cling':([0,],[10,]),'Clink':([0,],[7,]),'Whack':([0,],[12,]),'$end':([1,2,3,4,5,6,7,8,9,10,11,12,],[-10,-1,-6,-8,-7,-4,-3,-11,-9,-2,0,-5,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -16,7 +16,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'line1':([0,],[3,]),}
+_lr_goto_items = {'line':([0,],[11,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -25,16 +25,16 @@ for _k, _v in _lr_goto_items.items():
        _lr_goto[_x][_k] = _y
 del _lr_goto_items
 _lr_productions = [
-  ("S' -> line1","S'",1,None,None,None),
-  ('line1 -> Tap','line1',1,'p_line1','PLYCreepyPoem.py',46),
-  ('line1 -> Cling','line1',1,'p_line1','PLYCreepyPoem.py',47),
-  ('line1 -> Clink','line1',1,'p_line1','PLYCreepyPoem.py',48),
-  ('line1 -> Drip','line1',1,'p_line1','PLYCreepyPoem.py',49),
-  ('line1 -> Whack','line1',1,'p_line1','PLYCreepyPoem.py',50),
-  ('line2 -> Shoes','line2',1,'p_line2','PLYCreepyPoem.py',60),
-  ('line2 -> Keys','line2',1,'p_line2','PLYCreepyPoem.py',61),
-  ('line2 -> Cuffs','line2',1,'p_line2','PLYCreepyPoem.py',62),
-  ('line2 -> Water','line2',1,'p_line2','PLYCreepyPoem.py',63),
-  ('line2 -> A','line2',1,'p_line2','PLYCreepyPoem.py',64),
-  ('line2 -> One','line2',1,'p_line2','PLYCreepyPoem.py',65),
+  ("S' -> line","S'",1,None,None,None),
+  ('line -> Tap','line',1,'p_line1','PLYCreepyPoem.py',46),
+  ('line -> Cling','line',1,'p_line1','PLYCreepyPoem.py',47),
+  ('line -> Clink','line',1,'p_line1','PLYCreepyPoem.py',48),
+  ('line -> Drip','line',1,'p_line1','PLYCreepyPoem.py',49),
+  ('line -> Whack','line',1,'p_line1','PLYCreepyPoem.py',50),
+  ('line -> Shoes','line',1,'p_line2','PLYCreepyPoem.py',60),
+  ('line -> Keys','line',1,'p_line2','PLYCreepyPoem.py',61),
+  ('line -> Cuffs','line',1,'p_line2','PLYCreepyPoem.py',62),
+  ('line -> Water','line',1,'p_line2','PLYCreepyPoem.py',63),
+  ('line -> A','line',1,'p_line2','PLYCreepyPoem.py',64),
+  ('line -> One','line',1,'p_lastline','PLYCreepyPoem.py',69),
 ]

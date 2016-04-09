@@ -2,18 +2,18 @@ Created by PLY version 3.8 (http://www.dabeaz.com/ply)
 
 Grammar
 
-Rule 0     S' -> line1
-Rule 1     line1 -> Tap
-Rule 2     line1 -> Cling
-Rule 3     line1 -> Clink
-Rule 4     line1 -> Drip
-Rule 5     line1 -> Whack
-Rule 6     line2 -> Shoes
-Rule 7     line2 -> Keys
-Rule 8     line2 -> Cuffs
-Rule 9     line2 -> Water
-Rule 10    line2 -> A
-Rule 11    line2 -> One
+Rule 0     S' -> line
+Rule 1     line -> Tap
+Rule 2     line -> Cling
+Rule 3     line -> Clink
+Rule 4     line -> Drip
+Rule 5     line -> Whack
+Rule 6     line -> Shoes
+Rule 7     line -> Keys
+Rule 8     line -> Cuffs
+Rule 9     line -> Water
+Rule 10    line -> A
+Rule 11    line -> One
 
 Terminals, with rules where they appear
 
@@ -32,65 +32,118 @@ error                :
 
 Nonterminals, with rules where they appear
 
-line1                : 0
-line2                : 
+line                 : 0
 
 Parsing method: LALR
 
 state 0
 
-    (0) S' -> . line1
-    (1) line1 -> . Tap
-    (2) line1 -> . Cling
-    (3) line1 -> . Clink
-    (4) line1 -> . Drip
-    (5) line1 -> . Whack
+    (0) S' -> . line
+    (1) line -> . Tap
+    (2) line -> . Cling
+    (3) line -> . Clink
+    (4) line -> . Drip
+    (5) line -> . Whack
+    (6) line -> . Shoes
+    (7) line -> . Keys
+    (8) line -> . Cuffs
+    (9) line -> . Water
+    (10) line -> . A
+    (11) line -> . One
 
-    Tap             shift and go to state 1
-    Cling           shift and go to state 4
-    Clink           shift and go to state 5
-    Drip            shift and go to state 2
-    Whack           shift and go to state 6
+    Tap             shift and go to state 2
+    Cling           shift and go to state 10
+    Clink           shift and go to state 7
+    Drip            shift and go to state 6
+    Whack           shift and go to state 12
+    Shoes           shift and go to state 3
+    Keys            shift and go to state 5
+    Cuffs           shift and go to state 4
+    Water           shift and go to state 9
+    A               shift and go to state 1
+    One             shift and go to state 8
 
-    line1                          shift and go to state 3
+    line                           shift and go to state 11
 
 state 1
 
-    (1) line1 -> Tap .
+    (10) line -> A .
 
-    $end            reduce using rule 1 (line1 -> Tap .)
+    $end            reduce using rule 10 (line -> A .)
 
 
 state 2
 
-    (4) line1 -> Drip .
+    (1) line -> Tap .
 
-    $end            reduce using rule 4 (line1 -> Drip .)
+    $end            reduce using rule 1 (line -> Tap .)
 
 
 state 3
 
-    (0) S' -> line1 .
+    (6) line -> Shoes .
 
+    $end            reduce using rule 6 (line -> Shoes .)
 
 
 state 4
 
-    (2) line1 -> Cling .
+    (8) line -> Cuffs .
 
-    $end            reduce using rule 2 (line1 -> Cling .)
+    $end            reduce using rule 8 (line -> Cuffs .)
 
 
 state 5
 
-    (3) line1 -> Clink .
+    (7) line -> Keys .
 
-    $end            reduce using rule 3 (line1 -> Clink .)
+    $end            reduce using rule 7 (line -> Keys .)
 
 
 state 6
 
-    (5) line1 -> Whack .
+    (4) line -> Drip .
 
-    $end            reduce using rule 5 (line1 -> Whack .)
+    $end            reduce using rule 4 (line -> Drip .)
+
+
+state 7
+
+    (3) line -> Clink .
+
+    $end            reduce using rule 3 (line -> Clink .)
+
+
+state 8
+
+    (11) line -> One .
+
+    $end            reduce using rule 11 (line -> One .)
+
+
+state 9
+
+    (9) line -> Water .
+
+    $end            reduce using rule 9 (line -> Water .)
+
+
+state 10
+
+    (2) line -> Cling .
+
+    $end            reduce using rule 2 (line -> Cling .)
+
+
+state 11
+
+    (0) S' -> line .
+
+
+
+state 12
+
+    (5) line -> Whack .
+
+    $end            reduce using rule 5 (line -> Whack .)
 
