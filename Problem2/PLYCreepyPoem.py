@@ -11,11 +11,11 @@ Data 2.0
 tokens = ('Tap','Cling','Clink','Drip', 'Whack', 'Shoes', 'Keys', 'Cuffs', 'Water', 'A', 'One')
 literals = ['.',  ]
 
-t_Tap = r'Tap.*$'
-t_Cling = r'Cling.*$'
-t_Clink = r'Clink.*$'
-t_Drip = r'Drip.*$'
-t_Whack = r'Whack.*$'
+t_Tap = r'^Tap.*$'
+t_Cling = r'^Cling.*$'
+t_Clink = r'^Clink.*$'
+t_Drip = r'^Drip.*$'
+t_Whack = r'^Whack.*$'
 t_Shoes = r'^Shoes.*$'
 t_Keys = r'^Keys.*$'
 t_Cuffs = r'^Cuffs.*$'
@@ -43,7 +43,7 @@ global step
 step = 0
 
 def p_line1(t):
-    '''line1 : Tap
+    '''line : Tap
              | Cling
              | Clink
              | Drip
@@ -57,7 +57,7 @@ def p_line1(t):
     print ("This is line 1 of the stanza, it has repetition: " + t[1])
 
 def p_line2(t):
-    '''line2 : Shoes
+    '''line : Shoes
              | Keys
              | Cuffs
              | Water
