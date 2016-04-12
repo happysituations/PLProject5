@@ -88,4 +88,4 @@ while True:
         break
     parser.parse(s)
 
-# To run the parser do the following in a terminal window: echo "Header1 is this~Header2 and that~~Data 1.0~Data 2.0" | tr "~" "\n" | grep -v '^\s*$' | python PLYstarter.py | sed "s/_~_/ which is a float./"
+#cat CreepyPoem.txt | grep -v '^\s*$' | python PLYCreepyPoem.py
