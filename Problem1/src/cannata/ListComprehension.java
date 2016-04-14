@@ -1,6 +1,6 @@
 package cannata;
 
-import java.util.*;
+        import java.util.*;
 
 public class ListComprehension {
     public static void main(String[] args) {
@@ -111,6 +111,103 @@ public class ListComprehension {
                 .filter(e -> (Integer)e.get(7) >= 1000 )
                 .findAny()
                 .ifPresent(System.out::println);
+
+        System.out.println();
+        System.out.println("select TITLE from emp where TITLE = 'SALES REPRESENTATIVE';");
+        emp.stream()
+                .filter(e -> e.get(6) == "SALES REPRESENTATIVE")
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select TITLE from emp where TITLE = 'PRESIDENT';");
+        emp.stream()
+                .filter(e -> e.get(6) == "PRESIDENT")
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select TITLE from emp where TITLE = 'STOCK CLERK';");
+        emp.stream()
+                .filter(e -> e.get(6) == "STOCK CLERK")
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select TITLE from emp where TITLE = 'VP, SALES';");
+        emp.stream()
+                .filter(e -> e.get(6) == "VP, SALES")
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select TITLE from emp where TITLE = 'VP, OPERATIONS';");
+        emp.stream()
+                .filter(e -> e.get(6) == "VP, OPERATIONS")
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select TITLE from emp where TITLE = 'VP, FINANCE';");
+        emp.stream()
+                .filter(e -> e.get(6) == "VP, FINANCE")
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select TITLE from emp where TITLE = 'VP, ADMINISTRATION';");
+        emp.stream()
+                .filter(e -> e.get(6) == "VP, ADMINISTRATION")
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY < 1000;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) < 1000 )
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY < 1500;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) < 1500 )
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY < 2000;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) < 2000 )
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY < 2500;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) < 2500 )
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY < 3000;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) < 3000 )
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY < 3500;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) < 3500 )
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY = 1400;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) == 1400 )
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY = 4500;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) == 800 )
+                .forEach(e -> {System.out.println(e);});
+
+        System.out.println();
+        System.out.println("select SALARY from emp where SALARY = 4500;");
+        emp.stream()
+                .filter(e -> (Integer)e.get(7) == 800 )
+                .forEach(e -> {System.out.println(e);});
+
 
     }
 }
